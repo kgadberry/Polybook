@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "polybook",
+	"version": "${version}",
+	"name": "Polybook",
+	"description": "Adds book item for Polydex! (Polymer)",
+	"authors": [
+		"Lemonnik6484"
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/mod/polybook",
+		"sources": "https://github.com/Lemonnik6484/Polybook"
+	},
+	"license": "AGPL-3.0",
+	"icon": "assets/polybook/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"dev.lemonnik.polybook.Polybook"
+		],
+		"fabric-datagen": [
+			"dev.lemonnik.polybook.PolybookDataGenerator"
+		]
+	},
+	"mixins": [
+		"polybook.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"polymer": "*",
+		"polydex": "*"
+	}
+}

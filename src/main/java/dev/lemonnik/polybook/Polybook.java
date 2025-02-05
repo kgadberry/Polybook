@@ -19,7 +19,7 @@ public class Polybook implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		final Item POLYBOOK = Registry.register(Registries.ITEM, Identifier.of(MOD_ID, "polydex"), new PolybookItem(
+		final Item POLYDEX = Registry.register(Registries.ITEM, Identifier.of(MOD_ID, "polydex"), new PolybookItem(
 				new Item.Settings()
 						.maxCount(1)
 						.registryKey(
@@ -29,5 +29,7 @@ public class Polybook implements ModInitializer {
 								)
 						)
 		));
+
+		PolymerResourcePackUtils.addModAssets(MOD_ID);
 	}
 }

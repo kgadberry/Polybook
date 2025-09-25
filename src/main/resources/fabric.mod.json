@@ -17,9 +17,6 @@
 	"entrypoints": {
 		"main": [
 			"dev.lemonnik.polybook.Polybook"
-		],
-		"fabric-datagen": [
-			"dev.lemonnik.polybook.PolybookDataGenerator"
 		]
 	},
 	"mixins": [

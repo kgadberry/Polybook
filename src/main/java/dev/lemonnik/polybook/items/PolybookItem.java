@@ -1,6 +1,5 @@
 package dev.lemonnik.polybook.items;
 
-import dev.lemonnik.polybook.Polybook;
 import eu.pb4.polymer.core.api.item.PolymerItem;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;

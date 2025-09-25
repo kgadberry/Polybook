@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
       "minecraft:book",
-      "#minecraft:leaves"
+      "minecraft:crafting_table"
   ],
   "result": {
     "count": 1,

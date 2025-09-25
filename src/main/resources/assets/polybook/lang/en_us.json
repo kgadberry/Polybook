@@ -1,3 +1,4 @@
 {
-  "item.polybook.polydex": "Polydex"
+  "item.polybook.polydex": "Polydex",
+  "item.polybook.polydex.tooltip": "Shows crafting recipes and item usage"
 }

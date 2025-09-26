@@ -2,10 +2,13 @@ package dev.lemonnik.polybook.items;
 
 import eu.pb4.polymer.core.api.item.PolymerItem;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.sound.SoundEvents;
+import net.minecraft.sound.SoundCategory;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.Identifier;
@@ -20,12 +23,12 @@ public class PolybookItem extends Item implements PolymerItem {
 
     @Override
     public ActionResult use(World world, PlayerEntity user, Hand hand) {
-        if (!world.isClient) {
-            if (user.isPlayer()) {
-                user.getServer().getCommandManager().executeWithPrefix(user.getCommandSource((ServerWorld) world), "/polydex");
-            }
+        if (!world.isClient && user instanceof ServerPlayerEntity serverPlayer) {
+            // Play sound and execute command
+            serverPlayer.playSoundToPlayer(SoundEvents.ITEM_BOOK_PAGE_TURN, SoundCategory.PLAYERS, 1.0f, 1.0f);
+            serverPlayer.getServer().getCommandManager().executeWithPrefix(serverPlayer.getCommandSource((ServerWorld) world), "/polydex");
         }
-        return super.use(world, user, hand);
+        return ActionResult.SUCCESS;
     }
 
     @Override

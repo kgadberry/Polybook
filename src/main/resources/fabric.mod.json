@@ -3,7 +3,7 @@
 	"id": "polybook",
 	"version": "${version}",
 	"name": "Polybook",
-	"description": "Adds book item for Polydex! (Polymer)",
+	"description": "Adds a book item for Polydex! (Polymer)",
 	"authors": [
 		"Lemonnik6484"
 	],
@@ -26,10 +26,7 @@
 		"fabricloader": ">=0.16.9",
 		"minecraft": "~1.21.4",
 		"java": ">=21",
-		"fabric-api": "*"
-	},
-	"suggests": {
-		"polymer": "*",
-		"polydex": "*"
+		"fabric-api": "*",
+		"polydex": ">=1.6.0+1.21.6"
 	}
 }
